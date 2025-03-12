@@ -28,7 +28,11 @@ int getPlayerGuess() {
     // TODO: Ask the player guest and return the player's number
     int guess;
     cout << "Nhap so tu 1-100:";
-    cin >> guess;
+    while(1){
+        cin >> guess;
+        if(guess<=100&&guess>=1)break;
+        cout << "Vui long nhap lai so tu 1-100:";
+    }
     return guess;
 }
 
@@ -95,7 +99,7 @@ char getPlayerOpinion() {
     // TODO: Ask the player about continue playing and return the player's choice
     char isContinued;
 
-    cout << "Choi tiep khong ? (Y/N)" << endl;
+    cout << "Ban co muon choi tiep? (Y/N)" << endl;
     cin >> isContinued;
     return isContinued;
 }
